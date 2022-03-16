@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:myapp_catalog/utils/routes.dart';
 
 // ignore: use_key_in_widget_constructors
 class LoginPage extends StatelessWidget {
@@ -9,68 +10,74 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Material(
         color: Colors.white,
-        child: Column(
-          children: [
-            SizedBox(
-              height: 85.0,
-            ),
-            Text(
-              "Pak Tour Guide & Services",
-              style: GoogleFonts.lato(
-                fontStyle: FontStyle.normal,
-                fontSize: 22,
-                fontWeight: FontWeight.bold,
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              SizedBox(
+                height: 85.0,
               ),
-            ),
-            SizedBox(
-              height: 50.0,
-            ),
-            Image.asset(
-              "assets/images/login_page.jpg",
-              fit: BoxFit.contain,
-            ),
-            SizedBox(
-              height: 45.0,
-            ),
-            Text(
-              "Welcome",
-              style: GoogleFonts.lato(
-                fontStyle: FontStyle.normal,
-                fontSize: 22,
-                fontWeight: FontWeight.bold,
+              Text(
+                "Pak Tour Guide & Services",
+                style: GoogleFonts.lato(
+                  fontStyle: FontStyle.normal,
+                  fontSize: 22,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
-            ),
-            SizedBox(
-              height: 20.0,
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 32),
-              child: Column(
-                children: [
-                  TextFormField(
-                    decoration: InputDecoration(
-                      hintText: "Enter username",
-                      labelText: "Username",
+              SizedBox(
+                height: 50.0,
+              ),
+              Image.asset(
+                "assets/images/login_page.jpg",
+                fit: BoxFit.contain,
+              ),
+              SizedBox(
+                height: 45.0,
+              ),
+              Text(
+                "Welcome",
+                style: GoogleFonts.lato(
+                  fontStyle: FontStyle.normal,
+                  fontSize: 28,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              SizedBox(
+                height: 20.0,
+              ),
+              Padding(
+                padding:
+                    const EdgeInsets.symmetric(vertical: 16, horizontal: 32),
+                child: Column(
+                  children: [
+                    TextFormField(
+                      decoration: InputDecoration(
+                        hintText: "Enter username",
+                        labelText: "Username",
+                      ),
                     ),
-                  ),
-                  TextFormField(
-                    obscureText: true,
-                    decoration: InputDecoration(
-                      hintText: "Enter Password",
-                      labelText: "Password",
+                    TextFormField(
+                      obscureText: true,
+                      decoration: InputDecoration(
+                        hintText: "Enter Password",
+                        labelText: "Password",
+                      ),
                     ),
-                  ),
-                  SizedBox(
-                    height: 20.0,
-                  ),
-                  ElevatedButton(
-                    child: Text("Login"),
-                    onPressed: () {},
-                  )
-                ],
-              ),
-            )
-          ],
+                    SizedBox(
+                      height: 40.0,
+                    ),
+                    ElevatedButton(
+                      child: Text("Login"),
+                      style: TextButton.styleFrom(minimumSize: Size(150, 50)),
+                      onPressed: () {
+                        Navigator.pushNamed(context, MyRoutes.homeRoute);
+                      },
+                    )
+                  ],
+                ),
+              )
+            ],
+          ),
         ));
   }
 }

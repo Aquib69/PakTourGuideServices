@@ -15,7 +15,7 @@ class HomePage extends StatelessWidget {
       body: Center(
         // ignore: avoid_unnecessary_containers
         child: Container(
-          child: Text("Welcome to $days days of Flutters by $name "),
+          child: Text("Welcome to Pak Tour Guide & Services "),
         ),
       ),
       // ignore: prefer_const_constructors
