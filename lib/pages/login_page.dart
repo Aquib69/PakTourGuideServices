@@ -12,14 +12,25 @@ class LoginPage extends StatelessWidget {
         child: Column(
           children: [
             SizedBox(
-              height: 35.0,
+              height: 85.0,
+            ),
+            Text(
+              "Pak Tour Guide & Services",
+              style: GoogleFonts.lato(
+                fontStyle: FontStyle.normal,
+                fontSize: 22,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            SizedBox(
+              height: 50.0,
             ),
             Image.asset(
-              "assets/images/login_page.png",
+              "assets/images/login_page.jpg",
               fit: BoxFit.contain,
             ),
             SizedBox(
-              height: 20.0,
+              height: 45.0,
             ),
             Text(
               "Welcome",
