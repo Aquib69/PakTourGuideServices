@@ -15,6 +15,7 @@ class HomePage extends StatelessWidget {
       body: Center(
         // ignore: avoid_unnecessary_containers
         child: Container(
+          // ignore: prefer_const_constructors
           child: Text("Welcome to Pak Tour Guide & Services "),
         ),
       ),
