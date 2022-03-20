@@ -1,30 +1,33 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: unused_import, prefer_const_constructors, duplicate_ignore
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:myapp_catalog/utils/routes.dart';
 
-// ignore: use_key_in_widget_constructors
-class LoginPage extends StatelessWidget {
+class Signup extends StatelessWidget {
+  const Signup({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
+    // ignore: prefer_const_constructors
     return Material(
         color: Colors.white,
         child: SingleChildScrollView(
           child: Column(
             children: [
               SizedBox(
-                height: 80.0,
+                height: 70.0,
               ),
               Image.asset(
-                "assets/images/login_page.jpg",
-                fit: BoxFit.contain,
+                "assets/images/sign_up.png",
+                height: 200,
+                width: 200,
               ),
               SizedBox(
                 height: 45.0,
               ),
               Text(
-                "Welcome",
+                "Signup",
                 style: GoogleFonts.lato(
                   fontStyle: FontStyle.normal,
                   fontSize: 28,
@@ -41,8 +44,15 @@ class LoginPage extends StatelessWidget {
                   children: [
                     TextFormField(
                       decoration: InputDecoration(
-                        hintText: "Enter username",
-                        labelText: "Username",
+                        hintText: "Enter name",
+                        labelText: "Name",
+                      ),
+                    ),
+                    TextFormField(
+                      obscureText: true,
+                      decoration: InputDecoration(
+                        hintText: "Enter Email",
+                        labelText: "Email",
                       ),
                     ),
                     TextFormField(
@@ -57,37 +67,14 @@ class LoginPage extends StatelessWidget {
                     ),
                     InkWell(
                       onTap: () {
-                        Navigator.pushNamed(context, MyRoutes.homeRoute);
+                        Navigator.pushNamed(context, MyRoutes.loginRoute);
                       },
                       child: Container(
                         width: 150,
                         height: 50,
                         alignment: Alignment.center,
                         child: Text(
-                          "Login",
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 18),
-                        ),
-                        decoration: BoxDecoration(
-                            color: Colors.green,
-                            borderRadius: BorderRadius.circular(8)),
-                      ),
-                    ),
-                    SizedBox(
-                      height: 20.0,
-                    ),
-                    InkWell(
-                      onTap: () {
-                        Navigator.pushNamed(context, MyRoutes.signupRoute);
-                      },
-                      child: Container(
-                        width: 150,
-                        height: 50,
-                        alignment: Alignment.center,
-                        child: Text(
-                          "Sign Up",
+                          "Signup",
                           style: TextStyle(
                               color: Colors.white,
                               fontWeight: FontWeight.bold,
