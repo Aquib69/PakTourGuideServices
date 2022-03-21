@@ -28,10 +28,11 @@ class MyApp extends StatelessWidget {
       initialRoute: "/",
       routes: {
         "/": (context) => LoginPage(),
+        // ignore: prefer_const_constructors
         MyRoutes.homeRoute: (context) => HomePage(),
         MyRoutes.loginRoute: (context) => LoginPage(),
         // ignore: prefer_const_constructors
-        MyRoutes.signupRoute:((context) => Signup()),
+        MyRoutes.signupRoute: ((context) => Signup()),
       },
     );
   }
