@@ -28,6 +28,7 @@ class LoginPage extends StatelessWidget {
                 style: GoogleFonts.lato(
                   fontStyle: FontStyle.normal,
                   fontSize: 28,
+                  color: Colors.orange,
                   fontWeight: FontWeight.bold,
                 ),
               ),

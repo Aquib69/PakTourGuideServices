@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myapp_catalog/widgets/most_popular.dart';
 import 'package:myapp_catalog/widgets/travel_blog.dart';
 
 // ignore: use_key_in_widget_constructors
@@ -21,7 +22,11 @@ class HomePage extends StatelessWidget {
           )
         ],
         // ignore: prefer_const_constructors
-        title: Text("Pak Tour Guide & Services"),
+        title: Text(
+          "Pak Tour Guide & Services",
+          // ignore: prefer_const_constructors
+          style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
+        ),
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -56,7 +61,7 @@ class HomePage extends StatelessWidget {
             ),
           ),
           // ignore: prefer_const_constructors
-          Expanded(flex: 1, child: Placeholder()),
+          Expanded(flex: 1, child: MostPopular()),
         ],
       ),
     );
