@@ -29,7 +29,7 @@ class TravelBlog extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.only(right: 20, bottom: 30),
                   child: ClipRRect(
-                    borderRadius: BorderRadius.circular(8),
+                    borderRadius: BorderRadius.circular(50),
                     child: Image.asset(
                       travel.url,
                       width: 600,

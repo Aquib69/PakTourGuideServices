@@ -99,6 +99,29 @@ class LoginPage extends StatelessWidget {
                             borderRadius: BorderRadius.circular(8)),
                       ),
                     ),
+                    SizedBox(
+                      height: 20.0,
+                    ),
+                    InkWell(
+                      onTap: () {
+                        Navigator.pushNamed(context, MyRoutes.signupRoute);
+                      },
+                      child: Container(
+                        width: 150,
+                        height: 50,
+                        alignment: Alignment.center,
+                        child: Text(
+                          "Local Guider",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 18),
+                        ),
+                        decoration: BoxDecoration(
+                            color: Colors.green,
+                            borderRadius: BorderRadius.circular(8)),
+                      ),
+                    ),
                   ],
                 ),
               )
